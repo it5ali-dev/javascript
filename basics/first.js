@@ -45,28 +45,6 @@ console.log(now - 1991 < now - 2024);
 */
 
 /*
-// Challange No. 1
-// for Mark
-console.log("For Mark");
-let mass = 95
-let height = 1.88
-
-let markBMI = mass / (height * height)
-console.log(`Mark's BMI : ${markBMI.toFixed(2)}`);
-
-console.log("For John");
-mass = 85
-height = 1.76
-
-let johnBMI = mass / (height * height)
-console.log(`John's BMI : ${johnBMI.toFixed(2)}`);
-
-let markHeightBMI = false
-
-if (markBMI > johnBMI) markHeightBMI = true
-console.log(`Mark has greater BMI than John: ${markHeightBMI}`);
-*/
-
 const firstName = "Ali"
 const job = "Software Eng"
 const BirthYear = 2002
@@ -74,3 +52,61 @@ const year = 2024
 
 const ali = "I'm " + firstName + ', a ' + (year - BirthYear) + ' years old ' + job + '!'
 console.log(ali);
+*/
+
+/*
+// Using template literals
+const firstName = "Ali"
+const job = "Software Eng"
+const BirthYear = 2002
+const year = 2024
+
+const ali = `I'm ${firstName}, a ${(year - BirthYear)} years old ${job}!`
+// This will show as wirtten in backticks with tabs
+// let example = `this is Ali
+//                 I live in Sialkot
+//                     study in Lahore`
+console.log(ali);
+console.log(example);
+*/
+
+/*
+const name = `Ali`
+const age = 21
+
+if (age >= 18) console.log(`${name} is eligible to have driving liecense 🚓`);
+else console.log(`${name} is not eligible to have a driving liecense 🚓`);
+
+const birthYear = 2002
+var century;
+if (birthYear <= 2000) century = 20
+else century = 21
+
+console.log(century);
+*/
+
+// Switch Statement
+const day = 'wednesday'
+switch (day) {
+    case "monday":
+        console.log(`Plan course Structure`);
+        console.log(`Go to coding meetup`);
+        break
+    case "tuesday":
+        console.log(`Prepare theory videos`);
+        break
+    case "wednesday":
+    case "thursday":
+        console.log(`Write code examples`);
+        break
+    case "friday":
+        console.log(`Record videos`);
+        break
+    case "saturday":
+    case "sunday":
+        console.log(`Enjoy the weekend!`);
+        break
+    default:
+        console.log(`Not a valid day`);
+
+}
