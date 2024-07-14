@@ -63,6 +63,7 @@ const retireYear = (birthyear, firstName) => {
 console.log(retireYear(2002, 'Ali'));
 */
 
+/*
 function cutFruits(fruit) {
     return fruit * 4
 }
@@ -73,3 +74,62 @@ function fruitProcessor(apple, orange) {
     return juice
 }
 console.log(fruitProcessor(3, 4));
+*/
+
+/*
+// Arrays
+const friend1 = 'ali'
+const friend2 = 'ahmed'
+const friend3 = 'allu'
+
+const friends = ['Ali', 'Hasan', 'Ali Hasan']
+console.log(friends);
+
+// console.log(friends[0]);
+// console.log(friends[1]);
+// console.log(friends[2]);
+// console.log(friends.length);
+
+friends.forEach(element => {
+    console.log(element);
+});
+
+const years = new Array(1991, 1993, 1999, 2002)
+console.log(years);
+
+const calcAge = function (birthYear) {
+    return 2024 - birthYear
+}
+let ages = []
+for (let i = 0; i < years.length; i++) {
+    ages[i] = calcAge(years[i])
+    // console.log(years[i]);
+}
+console.log(ages);
+*/
+
+// Array methods
+let friends = ['Ali', 'Hasan', 'Ali Hasan']
+console.log(friends);
+
+// Add elements
+friends.push("Yusuf")
+console.log(friends);
+friends.unshift("ali")
+console.log(friends);
+
+// Remove Elements
+friends.pop()
+console.log(friends);
+friends.shift()
+console.log(friends);
+
+// Other Methods
+console.log(friends.indexOf("Ali"));
+console.log(friends.indexOf("Ali Hasan"));
+console.log(friends.includes("Ali"));
+console.log(friends.includes("Ali Hassan"));
+
+friends.push(23)
+// it will give you false as it uses `===` to check for the value
+console.log(friends.includes("23"));
