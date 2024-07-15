@@ -108,6 +108,7 @@ for (let i = 0; i < years.length; i++) {
 console.log(ages);
 */
 
+/*
 // Array methods
 let friends = ['Ali', 'Hasan', 'Ali Hasan']
 console.log(friends);
@@ -133,3 +134,73 @@ console.log(friends.includes("Ali Hassan"));
 friends.push(23)
 // it will give you false as it uses `===` to check for the value
 console.log(friends.includes("23"));
+
+const ali = ['Ali', 'Hassan', 2024 - 2002, 'Software Eng.', ['Hassan', 'Ali', 'Hasan Ali']]
+console.log(ali);
+*/
+
+/*
+// Objects
+const ali = {
+    firstName: 'Ali',
+    lastName: 'Hasan',
+    age: 2024 - 2002,
+    job: "Software Eng.",
+    friends: ['Hasan', 'Ali', 'Hasan Ali']
+}
+// console.log(ali);
+// Dot Notation
+// console.log(ali.friends);
+// Bracket Notation
+// console.log(ali['lastName']);
+let nameKey = 'Name'
+// console.log(ali["first" + nameKey]);
+// console.log(ali["last" + nameKey]);
+
+// let interestedIn = prompt(`What do you want to know about Ali?
+// Choose between firstName, lastName, age, job and friends`)
+// if (ali[interestedIn]) {
+//     console.log(ali[interestedIn]);
+// } else {
+//     alert(`${interestedIn} is not defined`);
+// }
+
+// add properties
+ali.location = 'Pakistan'
+ali['twitter'] = 'it5hasan'
+// console.log(ali);
+ali.friends.push('Yusuf')
+ali.friends.unshift('Muhammad')
+console.log(`${ali.firstName} has ${ali.friends.length} friends, and his best friend is ${ali.friends[0]}`);
+*/
+
+/*
+// Object Methods More
+const ali = {
+    firstName: 'Ali',
+    lastName: "Hasan",
+    birthYear: 2000,
+    job: 'Software Eng.',
+    friends: ['Hasan', 'Ali', 'Hasan Ali'],
+    hasDriverLiecense: false,
+    // calcAge: function () {
+    //     return 2024 - this.birthYear
+    // }
+    calcAge: function () {
+        this.age = 2024 - this.birthYear
+        return this.age
+    },
+    getSummary: function () {
+        console.log(`${this.firstName} is a ${this.calcAge()} years old ${this.job}, and he has ${this.hasDriverLiecense ? 'a' : 'no'} driver liecense`);
+    }
+}
+// console.log(ali.calcAge());
+// This is how we call a function using bracket Notation
+// console.log(ali['calcAge']());
+// console.log(ali.age);
+// console.log(ali.age);
+// console.log(ali.age);
+// console.log(ali.age);
+ali.getSummary()
+*/
+

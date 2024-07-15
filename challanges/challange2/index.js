@@ -24,6 +24,7 @@ let checkWinner = function (avgDolphins, avgKoalas) {
 checkWinner(avgDolphins, avgKoalas)
 */
 
+/*
 // Challange No. 2
 let bill = 100
 let bills = [125, 555, 44]
@@ -47,3 +48,4 @@ console.log(tip);
 console.log(bills);
 console.log(tips);
 console.log(total);
+*/
