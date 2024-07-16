@@ -204,3 +204,64 @@ const ali = {
 ali.getSummary()
 */
 
+/*
+// Loops
+for (let i = 1; i <= 10; i++) {
+    // console.log(`lifting weights repitition ${i} 🏋️‍♂️`);
+}
+
+const ali = ['Ali', 'Hasan', 2024 - 2002, 'Software Eng.', ['Yusuf', 'Hasan', 'Ali']]
+for (let i = 0; i < ali.length; i++) {
+    // console.log(ali[i]);
+}
+
+const years = [1991, 2003, 2007, 1969, 2020]
+let ages = []
+for (let i = 0; i < years.length; i++) {
+    ages.push(2024 - years[i])
+}
+// console.log(ages);
+
+// continue and break
+// for (let i = 0; i < ali.length; i++) {
+//     if (typeof ali[i] !== 'string') continue
+//     console.log(ali[i], typeof ali[i]);
+// }
+// BREAK with Number
+for (let i = 0; i < ali.length; i++) {
+    if (typeof ali[i] === 'number') break
+    console.log(ali[i], typeof ali[i]);
+}
+*/
+
+/*
+// Printing backward
+const ali = ['Ali', 'Hasan', 2024 - 2002, 'Software Eng.', ['Yusuf', 'Hasan', 'Ali']]
+for (let i = ali.length - 1; i >= 0; i--) {
+    console.log(`${i + 1} -> ${ali[i]}`);
+}
+
+// Nested Loops
+for (let i = 1; i <= 3; i++) {
+    console.log(`----- Starting Exercise ${i} -----`);
+    for (let rep = 1; rep <= 5; rep++) {
+        console.log(`Lifting Weight Repitition ${rep}`);
+    }
+}
+*/
+
+// While Loop
+let i = 1
+while (i <= 10) {
+    // console.log(`Lifting Weight Repitition ${i}`);
+    i++
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1
+// console.log(dice);
+
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1
+    if (dice === 6) console.log(`loop is about to end ...`);
+}

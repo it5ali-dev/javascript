@@ -49,3 +49,62 @@ console.log(bills);
 console.log(tips);
 console.log(total);
 */
+
+/*
+// Challange No.3
+let mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+    calcBMI: function () {
+        return (this.mass / this.height ** 2)
+    }
+}
+let john = {
+    fullName: 'John Smith',
+    mass: 91,
+    height: 1.95,
+    calcBMI: function () {
+        return (this.mass / this.height ** 2)
+    }
+}
+if (mark.calcBMI() > john.calcBMI()) {
+    console.log(`Mark's BMI (${mark.calcBMI().toFixed(2)}) is higher than John's (${john.calcBMI().toFixed(2)})`)
+} else if (mark.calcBMI() < john.calcBMI()) {
+    console.log(`John's BMI (${john.calcBMI().toFixed(2)}) is higher than Mark's (${mark.calcBMI().toFixed(2)})`);
+} else {
+    console.log(`Both have same BMI`);
+}
+*/
+
+// Challange No.4
+let bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52]
+let tips = []
+let total = []
+
+for (let i = 0; i < bills.length; i++) {
+    if (bills >= 50 && bills <= 300) {
+        tips.push(bills[i] * 0.15)
+    } else {
+        tips.push(bills[i] * 0.2)
+    }
+    total.push(bills[i] + tips[i])
+}
+
+console.log(`Bills -> ${bills}
+Tips -> ${tips}
+Total -> ${total}`);
+
+let nums = [11, 13, 41, 14, 15, 18, 17, 20, 19, 10]
+let calcAverage = function (arr) {
+    let sum = 0
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i]
+    }
+    let avg = sum / arr.length
+    return avg
+}
+let average = calcAverage(nums)
+console.log(average);
+console.log(calcAverage(total));
+console.log(calcAverage(tips).toFixed(2));
