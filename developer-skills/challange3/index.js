@@ -70,10 +70,22 @@ console.log(`The Temperature Amplitude -> ${amplitude}`);
 
 // merge two arrays
 
-// in ES5 
+// in ES5
 let array = temperature.concat(temperature)
 console.log(array);
 // in ES6
 let newArray = [...temperature, ...temperature]
 console.log(newArray);
 */
+
+// Challange No.3
+// let data1 = [17, 21, 23]
+let data1 = [12, 5, -5, 0, 4]
+let printForcast = function (arr) {
+    let concatinate = ''
+    for (let i = 0; i < arr.length; i++) {
+        concatinate += `... ${arr[i]}°C in ${i + 1} days `
+    }
+    return concatinate
+}
+console.log(printForcast(data1));
