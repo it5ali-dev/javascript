@@ -1,37 +1,58 @@
 'use strict'
 
-const input = document.querySelector('.userInput')
-// console.log(input.value);
-const check = document.querySelector('.check')
-const box = document.querySelector('.box')
-const estimate = document.querySelector('.estimate')
-const high = document.querySelector('.highScore')
-let highScore = 0
-high.textContent = highScore
-const turn = document.querySelector('.score')
-let score = 20
-let random = Math.round(Math.random() * 100)
+/*
+console.log(document.querySelector('.estimate').textContent);
+document.querySelector('.estimate').textContent = `🎉 Correct Number!`
+console.log(document.querySelector('.estimate').textContent);
+document.querySelector('.box').textContent = 13
+document.querySelector('.score').textContent = 20
 
-// input.value = Number(input.value)
+document.querySelector('.userInput').value = 21
+console.log(document.querySelector('.userInput').value);
+*/
+
+let random = Math.round(Math.random() * 20) + 1
 
 // console.log(random);
-turn.textContent = score
 
-// console.log(typeof (input.value));
+let score = 20
+let high = 0
+document.querySelector('.score').textContent = score
+document.querySelector('.highScore').textContent = high
 
-check.onclick = function () {
-    box.textContent = input.value
-    if (Number(input.value) === random) {
-        estimate.textContent = `You Guess my number !`;
-        high.textContent = score
-        return
-    } else if (Number(input.value) < random) {
-        estimate.textContent = `too low!`
-    } else if (Number(input.value) > random) {
-        estimate.textContent = `too high!`
-    } else {
-        console.log(`Something wents wrong`);
+document.querySelector('.check').addEventListener('click', function () {
+    let guess = Number(document.querySelector('.userInput').value)
+    document.querySelector('.box').textContent = guess
+    if (!guess) {
+        document.querySelector('.estimate').textContent = '⛔ Not a number!'
+    } else if (guess === random) {
+        document.querySelector('.estimate').textContent = `🎉 Correct Number!`
+        document.querySelector('body').style.backgroundColor = 'green'
+        document.querySelector('.box').style.padding = '15px 80px'
+        if (high < score) {
+            high = score
+            document.querySelector('.highScore').textContent = high
+        }
+    } else if (guess !== random) {
+        if (score > 1) {
+            document.querySelector('.estimate').textContent = guess > random ? `📈 Too high!` : `📉 Too low!`
+            --score
+            document.querySelector('.score').textContent = score
+        } else {
+            document.querySelector('.estimate').textContent = `You lost the game!`
+            document.querySelector('.score').textContent = 0
+        }
     }
-    --score
-    turn.textContent = score
-}
+})
+
+document.querySelector('.again').addEventListener('click', function () {
+    score = 20
+    random = Math.round(Math.random() * 20) + 1
+
+    document.querySelector('.userInput').value = ''
+    document.querySelector('.score').textContent = score
+    document.querySelector('body').style.backgroundColor = 'black'
+    document.querySelector('.estimate').textContent = 'Start guessing ...'
+    document.querySelector('.box').textContent = '?'
+    document.querySelector('.box').style.padding = '15px 15px'
+})

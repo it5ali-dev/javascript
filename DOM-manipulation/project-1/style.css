@@ -46,7 +46,7 @@ h1 {
 .box {
     position: absolute;
     top: -40px;
-    left: 48%;
+    left: 46%;
     font-size: 60px;
     background-color: white;
     color: black;
@@ -64,6 +64,7 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-left: 10%;
 }
 
 input {
@@ -83,7 +84,6 @@ input,
 }
 
 .display {
-    margin-left: 10%;
     align-items: flex-start;
 }
 
