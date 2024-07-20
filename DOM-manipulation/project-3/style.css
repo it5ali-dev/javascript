@@ -90,12 +90,12 @@ body {
 }
 
 .btns .again {
-    top: 50px;
+    top: 40px;
     transform: translate(1.2%, 25%);
 }
 
 .btns .roll {
-    top: 230px;
+    top: 235px;
     transform: translate(3.5%, 25%);
 }
 
@@ -103,3 +103,18 @@ body {
     transform: translate(25%, 25%);
     top: 310px;
 }
+
+.img {
+    width: 100px;
+    margin-left: 25px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* .img-6 {
+    position: absolute;
+    top: 130px;
+    display: block;
+} */
