@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to top left, purple, red);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* position: relative; */
+}
+
+.container {
+    margin: auto;
+    margin-top: 10%;
+    width: 800px;
+    height: 60vh;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex: 1;
+    /* justify-content: center;
+    align-items: center; */
+    background-color: black;
+    /* transform: translate(12%, 100%); */
+}
+
+.player {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.player1 {
+    background-color: pink;
+    border-radius: 20px 0 0 20px;
+}
+
+.player2 {
+    background-color: rgb(253, 175, 209);
+    border-radius: 0 20px 20px 0;
+}
+
+.count {
+    font-size: 50px;
+    color: rgb(255, 56, 89);
+}
+
+.btn {
+    position: absolute;
+}
+
+.current {
+    margin-top: 8rem;
+    text-align: center;
+    background-color: rgb(255, 99, 125);
+    width: 12rem;
+    height: 7rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.btns {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 41%;
+    width: 150px;
+    height: 100%;
+}
+
+.btn {
+    text-align: center;
+    padding: 15px 15px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.btns .again {
+    top: 50px;
+    transform: translate(1.2%, 25%);
+}
+
+.btns .roll {
+    top: 230px;
+    transform: translate(3.5%, 25%);
+}
+
+.btns .hold {
+    transform: translate(25%, 25%);
+    top: 310px;
+}
