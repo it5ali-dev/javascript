@@ -1,5 +1,6 @@
 'use strict'
 
+/*
 const restaurant = {
     name: 'Classico Italiano',
     location: 'Italy',
@@ -63,3 +64,9 @@ const [i, , [j]] = nested
 // default values
 const [p = 1, q = 1, r = 1] = [5, 7]
 // console.log(p, q, r);
+*/
+
+const arr = [7, 12, 3]
+const badNewArray = [1, 2, arr[0], arr[1], arr[2]]
+const newArray = [1, 2, ...arr]
+console.log(arr, badNewArray, newArray, ...newArray);
